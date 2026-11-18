@@ -1,0 +1,343 @@
+:root {
+	--text-color: #3f3f3f;
+	--form-color: #999;
+	--menu-color: white;
+	--main-color: #1c2b47;
+	--accent-color: #f7d046;
+	--error-color: rgb(220, 55, 45);
+	--error-area-color: #F3CFCE;
+	--info-area-color: #A7C7E7;
+	--font-stack: Arial, Helvetica, sans-serif;
+	--page-width: 95%;
+	--page-padding: 2rem;
+	--post-card-width: 25rem;
+	--background-color: #ffffff;
+	--input-background-color: #ffffff;
+	--link-color: #0969da;
+	--card-border-color: transparent;
+}
+
+:root[data-theme="dark"] {
+    --background-color: #0d1117;
+    --text-color: #e6edf3;
+    --form-color: #8b949e;
+    --menu-color: #f0f6fc;
+    --main-color: #161b22;
+    --accent-color: #f7d046;
+    --error-color: #ff7b72;
+    --error-area-color: #3d2428;
+    --info-area-color: #192f45;
+    --input-background-color: #161b22;
+    --link-color: #58a6ff;
+	--card-border-color: #656d76;
+}
+
+#theme-toggle .sun-icon {
+    display: none;
+}
+
+:root[data-theme="dark"] #theme-toggle .moon-icon {
+    display: none;
+}
+
+:root[data-theme="dark"] #theme-toggle .sun-icon {
+    display: inline;
+}
+
+#theme-toggle {
+    view-transition-name: theme-icon;
+}
+
+::view-transition-group(theme-icon) {
+    animation-duration: 0.5s;
+}
+
+a {
+    color: var(--link-color);
+}
+
+body {
+	background-color: var(--background-color);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	font-family: var(--font-stack);
+	color: var(--text-color);
+}
+main {
+	max-width: var(--page-width);
+	padding: var(--page-padding);
+}
+
+#my-name {
+	font-size: 3rem;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	background-color: var(--main-color);
+	padding: 1rem;
+}
+
+footer {
+	margin-top: auto;
+	background-color: var(--main-color);
+	color: var(--menu-color);
+	padding: 1.25rem;
+	display: flex;
+	justify-content: center;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+}
+
+header input {
+	display: none;
+}
+/* 
+This selects h1 with the custom data-greeting attribute. I want only the home page's greeting to 
+have the h1 be smaller.
+*/
+h1[data-greeting] {
+	font-size: 1.5rem;
+}
+
+/* 
+This pushes the button next the menu elements to the other side of the nav bar 
+*/
+ul + button {
+	margin-left: auto;
+}
+/* 
+This selects the top level menu elements of the nav bar and styles them. We do not style the nested
+children elements
+*/
+nav > ul{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 2rem;
+}
+
+nav a {
+	color: var(--menu-color);
+	text-decoration: none;
+	padding: 1em;
+}
+
+nav button {
+	background-color: var(--main-color);
+	border: none;
+	color: var(--menu-color)
+}
+
+.me-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+}
+article socials-container a {
+	background-color: transparent;
+	color: var(--link-color);
+}
+
+socials-container svg {
+    fill: currentColor;
+}
+
+socials-container a:hover:not(.main-logo) {
+    background-color: var(--accent-color);
+}
+
+socials-container p {
+	white-space: nowrap;
+	font-size: large;
+}
+socials-container ul{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+	padding: 0;
+}
+
+#me-info {
+	width: 100%;
+}
+
+#me-links {
+	display: flex;
+	justify-content: space-around;
+}
+
+#me-location {
+	display: flex;
+	align-items: center;
+}
+
+article a, article button {
+	display: inline-block;
+	padding: 0.7em 1em;
+	border-radius: 0.5em;
+	background-color: var(--accent-color);
+	color: var(--main-color);
+	text-decoration: none;
+	border: none;
+}
+
+picture img {
+	border-radius: 20%;
+	width: auto;
+	margin-left: auto;
+}
+
+nav a:hover:not(.main-logo), nav button:hover {
+	background-color: var(--accent-color);
+	color: var(--main-color);
+	border-radius: 1rem;
+}
+
+a:hover:not(.main-logo), button:hover {
+	background-color: #EFEFEF;
+}
+
+a:focus, input:focus, select:focus, textarea:focus, button:focus {
+	outline: 3px var(--accent-color) solid;
+	border-radius: 0.5rem;
+}
+#post-section {
+	display: flex;
+	justify-content: space-around;
+}
+.post {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	color: var(--menu-color);
+	background-color: var(--main-color);
+	border-radius: 1rem;
+	width: var(--post-card-width);
+	padding: 2rem;
+	border: 1px solid var(--card-border-color);
+}
+.post h2 {
+	overflow-wrap: break-word;
+}
+
+#form-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#error-area {
+	background-color: var(--error-area-color);
+	color: var(--error-color);
+	margin-bottom: 1rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+}
+
+#info-area {
+	background-color: var(--info-area-color);
+	margin-bottom: 1rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+}
+
+#comments-count.near-limit {
+	background-color: var(--accent-color);
+	font-weight: bold;
+}
+
+#contact-form {
+	display: flex;
+	flex-direction: column;
+}
+
+form-field {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+form-field label {
+	font-weight: bold;
+}
+
+form-field input, form-field select, form-field textarea {
+	background-color: var(--input-background-color);
+	color: var(--text-color);
+	padding: 0.5em 0.8em;
+	border: 1px solid var(--form-color);
+	border-radius: 0.5rem;
+}
+
+form-field textarea {
+	min-height: 5rem;
+	resize: vertical;
+}
+
+form-field .required-q {
+	color: var(--error-color);
+}
+
+form-field input:required:user-valid {
+	border: 1px solid var(--form-color);
+}
+
+form-field field-error {
+	visibility: hidden;
+}
+
+form-field input:required:user-invalid, form-field textarea:required:user-invalid {
+	border: 1px solid var(--error-color);
+}
+
+form-field input:required:user-invalid + field-error, form-field textarea:required:user-invalid + field-error {
+	visibility: visible;
+}
+
+form-field field-error {
+	color: var(--error-color);
+}
+
+@media (max-width: 60rem) {
+	article {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	nav {
+		flex-direction: column;
+	}
+	nav ul {
+		flex-direction: column;
+	}
+	#me-info {
+		max-width: 90%;
+	}
+	#me-links {
+		flex-direction: column;
+		align-items: center;
+		gap: 25px;
+	}
+	#post-section {
+		flex-direction: column;
+		align-items: center;
+	}
+	.post {
+		width: 10rem;
+	}
+	.post img {
+		width: 100%;
+	}
+}
