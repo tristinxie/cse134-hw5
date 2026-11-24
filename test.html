@@ -1,0 +1,10 @@
+<study-note></study-note>
+<script>
+class StudyNote extends HTMLElement {
+	connectedCallback() {
+	this.textContent = "Remember to test with the keyboard.";
+	}
+}
+
+customElements.define("study-note", StudyNote);
+</script>

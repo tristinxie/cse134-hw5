@@ -182,7 +182,7 @@ socials-container ul{
 	align-items: center;
 }
 
-article a, article button {
+article a, article button, project-card a {
 	display: inline-block;
 	padding: 0.7em 1em;
 	border-radius: 0.5em;
@@ -231,6 +231,41 @@ a:focus, input:focus, select:focus, textarea:focus, button:focus {
 .post h2 {
 	overflow-wrap: break-word;
 }
+
+project-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	color: var(--menu-color);
+	background-color: var(--main-color);
+	border-radius: 1rem;
+	width: var(--post-card-width);
+	padding: 2rem;
+	border: 1px solid var(--card-border-color);
+}
+
+project-card h2 {
+	overflow-wrap: break-word;
+}
+
+project-card img {
+	display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+project-card button {
+	padding: 0.75rem 1rem;
+    border-radius: 1rem;
+	background-color: var(--main-color);
+	border: 1px solid var(--link-color);
+	color: white;
+	margin: 0.5rem 0.5rem;
+}
+
 
 #form-section {
 	display: flex;
@@ -338,6 +373,12 @@ form-field field-error {
 		width: 10rem;
 	}
 	.post img {
+		width: 100%;
+	}
+	project-card {
+		width: 10rem;
+	}
+	project-card img {
 		width: 100%;
 	}
 }

@@ -1,2 +1,3 @@
-Repository: https://github.com/tristinxie/cse134-hw4
-Website: https://chipper-nougat-1a3f90.netlify.app/
+https://github.com/tristinxie/cse134-hw5
+https://velvety-trifle-70e91f.netlify.app/
+https://velvety-trifle-70e91f.netlify.app/blog.html

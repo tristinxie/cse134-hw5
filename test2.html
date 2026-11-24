@@ -1,0 +1,13 @@
+<button type="button" id="show-message">Show message</button>
+<div id="messages"></div>
+
+<script>
+  const button = document.querySelector("#show-message");
+  const messages = document.querySelector("#messages");
+
+  const message = document.createElement("p");
+  button.addEventListener("click", () => {
+    message.textContent = message.textContent ? message.textContent + "!" : "You activated the button!" ;
+    messages.appendChild(message);
+  });
+</script>
