@@ -234,13 +234,16 @@ a:focus, input:focus, select:focus, textarea:focus, button:focus {
 }
 
 project-card {
+	--card-bg: var(--main-color, blue);
+	--card-text: var(--menu-color, white);
+	--card-btn-border: var(--link-color, lightBlue);
 	display: flex;
 	flex-direction: column;
 	box-sizing: border-box;
 	align-items: center;
 	justify-content: space-between;
-	color: var(--menu-color);
-	background-color: var(--main-color);
+	color: white;
+	background-color: var(--card-bg);
 	border-radius: 1rem;
 	width: var(--post-card-width);
 	padding: 2rem;
@@ -262,9 +265,9 @@ project-card img {
 project-card button {
 	padding: 0.75rem 1rem;
     border-radius: 1rem;
-	background-color: var(--main-color);
-	border: 1px solid var(--link-color);
-	color: white;
+	background-color: var(--card-bg, blue);
+	color: var(--card-text, white);
+	border: 1px solid var(--card-btn-border, lightBlue);
 	margin: 0.5rem 0.5rem;
 }
 
