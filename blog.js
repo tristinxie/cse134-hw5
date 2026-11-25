@@ -6,7 +6,7 @@ let isExpanded = false;
 
 const setDetailsMode = (expanded) => {
 	isExpanded = expanded;
-	const shouldExpand = [...cards].some(card => card.hasAttribute("compact"));
+
 	cards.forEach(card => {
 		card.toggleAttribute("compact", !isExpanded);
 	});

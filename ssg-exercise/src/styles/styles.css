@@ -15,6 +15,8 @@
 	--input-background-color: #ffffff;
 	--link-color: #0969da;
 	--card-border-color: transparent;
+	--hover-bg: #efefef;
+	--hover-text: #3f3f3f;
 }
 
 :root[data-theme="dark"] {
@@ -30,6 +32,8 @@
     --input-background-color: #161b22;
     --link-color: #58a6ff;
 	--card-border-color: #656d76;
+	--hover-bg: #30363d;
+	--hover-text: #f0f6fc;
 }
 
 #theme-toggle .sun-icon {
@@ -213,8 +217,8 @@ nav a:hover:not(.main-logo), nav button:hover {
 }
 
 a:hover:not(.main-logo), button:hover, #toggle-details:hover {
-	background-color: #EFEFEF;
-	color: var(--text-color);
+	background-color: var(--hover-bg, #efefef);
+	color: var(--hover-text, #3f3f3f);
 }
 
 a:focus, input:focus, select:focus, textarea:focus, button:focus {
@@ -255,7 +259,7 @@ project-card:defined {
 	align-items: center;
 	justify-content: space-between;
 	color: white;
-	background-color: var(--card-bg);
+	background-color: var(--card-bg, darkBlue);
 	border-radius: 1rem;
 	width: var(--post-card-width);
 	padding: 2rem;
