@@ -215,6 +215,7 @@ a:focus, input:focus, select:focus, textarea:focus, button:focus {
 #post-section {
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 .post {
 	display: flex;
@@ -235,6 +236,7 @@ a:focus, input:focus, select:focus, textarea:focus, button:focus {
 project-card {
 	display: flex;
 	flex-direction: column;
+	box-sizing: border-box;
 	align-items: center;
 	justify-content: space-between;
 	color: var(--menu-color);
@@ -368,15 +370,13 @@ form-field field-error {
 	#post-section {
 		flex-direction: column;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 	.post {
 		width: 10rem;
 	}
 	.post img {
 		width: 100%;
-	}
-	project-card {
-		width: 10rem;
 	}
 	project-card img {
 		width: 100%;
