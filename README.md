@@ -7,7 +7,7 @@
 ```
 ### Pages
 - Home: /
-- About: /about/
+- About: /profile/
 
 Other pages are linked in nav but do not work.
 

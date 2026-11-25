@@ -254,12 +254,16 @@ project-card:defined {
 	box-sizing: border-box;
 	align-items: center;
 	justify-content: space-between;
-	color: white;
+	color: var(--card-text, white);
 	background-color: var(--card-bg);
 	border-radius: 1rem;
 	width: var(--post-card-width);
 	padding: 2rem;
 	border: 1px solid var(--card-border-color);
+}
+
+#toggle-details[hidden] {
+    display: none;
 }
 
 project-card h2 {

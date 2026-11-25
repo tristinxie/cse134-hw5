@@ -1,6 +1,7 @@
 const toggleButton = document.querySelector("#toggle-details");
 const cards = document.querySelectorAll("project-card");
 
+toggleButton.hidden = false;
 let isExpanded = false;
 
 const setDetailsMode = (expanded) => {
@@ -9,6 +10,9 @@ const setDetailsMode = (expanded) => {
 	cards.forEach(card => {
 		card.toggleAttribute("compact", !isExpanded);
 	});
+
+	toggleButton.textContent = isExpanded ? "Collapse Details" : "Expand Details";
+	toggleButton.setAttribute("aria-expanded", String(isExpanded));
 }
 
 let savedMode = null;
