@@ -144,6 +144,14 @@ nav button {
 	align-items: center;
 	gap: 3rem;
 }
+
+#blog-controls {
+	display: flex;
+	align-items: center;
+}
+fieldset {
+	flex: 1;
+}
 article socials-container a {
 	background-color: transparent;
 	color: var(--link-color);
@@ -182,7 +190,7 @@ socials-container ul{
 	align-items: center;
 }
 
-article a, article button, project-card a {
+article a, article button, project-card a, #toggle-details {
 	display: inline-block;
 	padding: 0.7em 1em;
 	border-radius: 0.5em;
@@ -204,8 +212,9 @@ nav a:hover:not(.main-logo), nav button:hover {
 	border-radius: 1rem;
 }
 
-a:hover:not(.main-logo), button:hover {
+a:hover:not(.main-logo), button:hover, #toggle-details:hover {
 	background-color: #EFEFEF;
+	color: var(--text-color);
 }
 
 a:focus, input:focus, select:focus, textarea:focus, button:focus {
@@ -234,6 +243,9 @@ a:focus, input:focus, select:focus, textarea:focus, button:focus {
 }
 
 project-card {
+	display: none;
+}
+project-card:defined {
 	--card-bg: var(--main-color, blue);
 	--card-text: var(--menu-color, white);
 	--card-btn-border: var(--link-color, lightBlue);

@@ -60,43 +60,39 @@
     <br>
   <main>
     <h1>Blog and Projects</h1>
-    <fieldset>
-      <legend>Post Filter</legend>
-      <label>
-        <input type="radio" name="post-filter" id="post-filter-all" checked>
-        <span>All</span>
-      </label>
-      <label>
-        <input type="radio" name="post-filter" id="post-filter-blog">
-        <span>Blog</span>
-      </label>
-      <label>
-        <input type="radio" name="post-filter" id="post-filter-projects">
-        <span>Projects</span>
-      </label>
-    </fieldset>
-	<button type="button", id="toggle-details">
-		Show Details
-	</button>
+    <section id="blog-controls">
+      <fieldset>
+        <legend>Post Filter</legend>
+        <label>
+          <input type="radio" name="post-filter" id="post-filter-all" checked>
+          <span>All</span>
+        </label>
+        <label>
+          <input type="radio" name="post-filter" id="post-filter-blog">
+          <span>Blog</span>
+        </label>
+        <label>
+          <input type="radio" name="post-filter" id="post-filter-projects">
+          <span>Projects</span>
+        </label>
+      </fieldset>
+      <button type="button" id="toggle-details">
+        Toggle Details
+      </button>
+    </section>
     <br>
     <section id="post-section">
-      <!-- <article class="post">
-        <img width=320 src="/assets/blog-post-1-hero.png"
-          alt="Hero image for blog post 1 - The End of React? with the React.js logo">
-        <h2>Learning Web Components and My Thoughts</h2>
-        <a href="/blog-post-1.html">Read post</a>
-      </article>
-      <br>
-      <article class="post">
-        <h2>MathML Extra Credit</h2>
-        <a href="/extra-credit.html">Read post</a>
-      </article> -->
-	  <project-card project="blogReact" compact></project-card>
-	  <project-card project="blogEMC" compact></project-card>
-	  <project-card project="blogEMC" compact></project-card>
-	  <project-card project="blogEMC" compact></project-card>
-	  <project-card project="blogEMC" compact></project-card>
-	  <project-card project="blogEMC" compact></project-card>
+      <noscript>
+        <h1>Enable JavaScript to view the interactive cards</h1>
+      </noscript>
+      <project-card project="blogReact" compact></project-card>
+      <project-card project="blogEMC" compact></project-card>
+      <project-card project="blogReact" compact></project-card>
+      <project-card project="blogEMC" compact></project-card>
+      <project-card project="blogReact" compact></project-card>
+      <project-card project="blogEMC" compact></project-card>
+      <project-card project="blogReact" compact></project-card>
+      <project-card project="blogEMC" compact></project-card>
     </section>
   </main>
   <br>
