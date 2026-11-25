@@ -258,7 +258,7 @@ project-card:defined {
 	box-sizing: border-box;
 	align-items: center;
 	justify-content: space-between;
-	color: white;
+	color: var(--card-text, white);
 	background-color: var(--card-bg, darkBlue);
 	border-radius: 1rem;
 	width: var(--post-card-width);
@@ -403,5 +403,9 @@ form-field field-error {
 	}
 	project-card img {
 		width: 100%;
+	}
+	project-card:defined { 
+		width: 100%;
+		max-width: var(--post-card-width); 
 	}
 }

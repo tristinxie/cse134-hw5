@@ -68,10 +68,10 @@ class ProjectCard extends HTMLElement {
 		this.description.textContent = this.project.description;
 
 		prevButton.type = "button";
-		prevButton.textContent = "< Previous";
+		prevButton.textContent = "Previous";
 
 		nextButton.type = "button";
-		nextButton.textContent = "Next >";
+		nextButton.textContent = "Next";
 
 		prevButton.setAttribute("aria-label", "Previous image");
 		nextButton.setAttribute("aria-label", "Next image");
